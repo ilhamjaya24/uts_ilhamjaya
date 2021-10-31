@@ -22,40 +22,6 @@ if ($dataisi['jenis_buku'] == 1) {
 
 
 
-
-if (isset($_POST['submit'])) {
-    $kd_buku = $_POST['kd_buku'];
-    $judul_buku = $_POST['judul_buku'];
-    $penulis = $_POST['penulis'];
-    $penerbit = $_POST['penerbit'];
-    $tahun_terbit = $_POST['tahun_terbit'];
-    $tanggal_cetak = $_POST['tanggal_cetak'];
-    $jml_halaman = $_POST['jml_halaman'];
-    $jenis_buku = $_POST['jenis_buku'];
-
-    // SQL Insert to Database db_surat
-    $insert_sql = "INSERT INTO tbl_buku (id, kd_buku, judul_buku, penulis, penerbit, tahun_terbit, tanggal_cetak, jml_halaman, jenis_buku) VALUES ('', '$kd_buku', '$judul_buku', '$penulis',
-        '$penerbit' , '$tahun_terbit', '$tanggal_cetak', '$jml_halaman',' $jenis_buku')";
-    $insert = $koneksi->query($insert_sql);
-
-    if ($insert) {
-         // header("Location:view.php?pesan=success");
- ?>
-        <script>
-            alert('DATA BERHASIL DITAMBAHKAN');
-            window.location.href = '<?= "view.php" ?>';
-        </script>
-    <?php
-
-    } else {
-    ?>
-        <script>
-            alert('Failed insert data');
-        </script>
-<?php
-    }
-}
-
 ?>
 
 
@@ -84,7 +50,7 @@ if (isset($_POST['submit'])) {
                             <div class="h3 text-center">Tambah Data BUku</div>
                         </div>
                         <div class="card-body">
-                            <form action="add_proses.php" method="post">
+                            <form action="add.php" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -147,7 +113,7 @@ if (isset($_POST['submit'])) {
                                         </div>
                                     </div></div>
                                     <div class="col-lg-6 mt-4">
-                                        <button type="submit" name="submit" class="btn btn-info text-white">Tambah</button>
+                     <button type="submit" name="submit" class="btn btn-info text-white">Tambah</button>
                                         <a href="view.php" class="btn btn-danger">Cancel</a>
                                     </div>
 
@@ -165,6 +131,43 @@ if (isset($_POST['submit'])) {
 
 <!-- Proses Add Data -->
 
+<?php 
+
+
+if (isset($_POST['submit'])) {
+    $kd_buku = $_POST['kd_buku'];
+    $judul_buku = $_POST['judul_buku'];
+    $penulis = $_POST['penulis'];
+    $penerbit = $_POST['penerbit'];
+    $tahun_terbit = $_POST['tahun_terbit'];
+    $tanggal_cetak = $_POST['tanggal_cetak'];
+    $jml_halaman = $_POST['jml_halaman'];
+    $jenis_buku = $_POST['jenis_buku'];
+
+    // SQL Insert to Database db_surat
+    $insert_sql = "INSERT INTO tbl_buku (id, kd_buku, judul_buku, penulis, penerbit, tahun_terbit, tanggal_cetak, jml_halaman, jenis_buku) VALUES ('', '$kd_buku', '$judul_buku', '$penulis',
+        '$penerbit' , '$tahun_terbit', '$tanggal_cetak', '$jml_halaman',' $jenis_buku')";
+    $insert = $koneksi->query($insert_sql);
+
+    if ($insert) {
+         // header("Location:view.php?pesan=success");
+ ?>
+        <script>
+            alert('DATA BERHASIL DITAMBAHKAN');
+            window.location.href = '<?= "view.php" ?>';
+        </script>
+    <?php
+
+    } else {
+    ?>
+        <script>
+            alert('Failed insert data');
+        </script>
+<?php
+    }
+}
+
+?>
 
 </body>
 

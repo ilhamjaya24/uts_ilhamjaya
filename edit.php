@@ -22,42 +22,6 @@ if ($dataisi['jenis_buku'] == 1) {
 
 
 
-if (isset($_POST['submit'])) {
-     $id = $_GET['id'];
-    $kd_buku = $_POST['kd_buku'];
-    $judul_buku = $_POST['judul_buku'];
-    $penulis = $_POST['penulis'];
-    $penerbit = $_POST['penerbit'];
-    $tahun_terbit = $_POST['tahun_terbit'];
-    $tanggal_cetak = $_POST['tanggal_cetak'];
-    $jml_halaman = $_POST['jml_halaman'];
-    $jenis_buku = $_POST['jenis_buku'];
-
-
-    // SQL Update to Databas
-    $update_sql = "UPDATE tbl_buku SET 
-    kd_buku='$kd_buku', judul_buku='$judul_buku', penulis='$penulis', penerbit='$penerbit',
-    tahun_terbit='$tahun_terbit', tanggal_cetak='$tanggal_cetak', jml_halaman='$jml_halaman', 
-    jenis_buku='$jenis_buku' WHERE id='$id'";
-    $update = $koneksi->query($update_sql);
-
-    if ($update) {
-        // 
-        ?>
-        <script>
-            alert('DATA BERHASIL DIRUBAH');
-            window.location.href = '<?= "view.php" ?>';
-        </script>
-    <?php
-    } else {
-    ?>
-        <script>
-            alert('Failed update data');
-        </script>
-<?php
-    }
-}
-
 
 
 ?>
@@ -89,7 +53,7 @@ if (isset($_POST['submit'])) {
                             <div class="h3 text-center">Edit Data Buku</div>
                         </div>
                         <div class="card-body">
-                           <form action="edit_proses.php?id=<?= $dataisi['id'] ?>" method="post">
+                           <form action="edit.php?id=<?= $dataisi['id'] ?>" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -167,6 +131,47 @@ if (isset($_POST['submit'])) {
                         
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
     <script src="assets/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<?php
+
+
+if (isset($_POST['submit'])) {
+     $id = $_GET['id'];
+    $kd_buku = $_POST['kd_buku'];
+    $judul_buku = $_POST['judul_buku'];
+    $penulis = $_POST['penulis'];
+    $penerbit = $_POST['penerbit'];
+    $tahun_terbit = $_POST['tahun_terbit'];
+    $tanggal_cetak = $_POST['tanggal_cetak'];
+    $jml_halaman = $_POST['jml_halaman'];
+    $jenis_buku = $_POST['jenis_buku'];
+
+
+    // SQL Update to Databas
+    $update_sql = "UPDATE tbl_buku SET 
+    kd_buku='$kd_buku', judul_buku='$judul_buku', penulis='$penulis', penerbit='$penerbit',
+    tahun_terbit='$tahun_terbit', tanggal_cetak='$tanggal_cetak', jml_halaman='$jml_halaman', 
+    jenis_buku='$jenis_buku' WHERE id='$id'";
+    $update = $koneksi->query($update_sql);
+
+    if ($update) {
+        // 
+        ?>
+        <script>
+            alert('DATA BERHASIL DIRUBAH');
+            window.location.href = '<?= "view.php" ?>';
+        </script>
+    <?php
+    } else {
+    ?>
+        <script>
+            alert('Failed update data');
+        </script>
+<?php
+    }
+}
+
+
+?>
 
 </body>
 

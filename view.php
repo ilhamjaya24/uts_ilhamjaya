@@ -106,7 +106,7 @@ require_once('koneksi.php');
 
                                                 <td>
                           <a href="edit.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Edit</a>
-                           <a href="delete_proses.php?id=<?= $data['id'] ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')" class="badge bg-danger p-2 text-white text-decoration-none">Delete</a>
+                           <a href="delete.php?id=<?= $data['id'] ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')" class="badge bg-danger p-2 text-white text-decoration-none">Delete</a>
                                                 
                                                 
                                                     
