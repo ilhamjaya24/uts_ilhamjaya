@@ -19,13 +19,13 @@ require_once('koneksi.php');
 <body>
     <div class="main mt-5">
         <div >
-           <!--  <?php 
+ <!-- <?php 
             $pesan = $_GET['pesan'];
             $frm = $_GET['frm'];                      
             if ($pesan == 'success' && $frm == 'del'){  
-            ?>
- -->
-<!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+ ?>
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
   <strong>Berhasil!</strong> Selamat Anda Berhasil Menghapus
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
@@ -46,15 +46,15 @@ require_once('koneksi.php');
 </div>
 <?php
             }
-?>
-    -->         <div class="row">
+?> -->
+            <div class="row">
                 <div class="col-lg-15">
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
-                            <div class="h2 text-center">Data Buku</div>
+                            <div class="h2 text-center"><b>Data Buku</b></div>
                             <div class="float-end">
-                                <br>
-                                <a href="add.php" style="margin-left: -735px; text-shadow: black;" class="badge bg-info py-2 px-2 small text-white fw-bold text-decoration-none">Tambah Data Buku</a>
+                               
+                                <a href="add.php" style="margin-left: -735px; text-shadow: black;" class="badge bg-info py-3 px-2 small text-white fw-bold text-decoration-none">Tambah Data Buku</a>
                                 <br> 
                             </div>
                         </div>
@@ -97,10 +97,10 @@ require_once('koneksi.php');
                                                 <td align="center"class="table-success" ><?= $data['judul_buku'] ?></td>
                                                 <td align="center" class="table-info"><?= $data['penulis'] ?></td>
                                                 <td align="center" class="table-success"><?= $data['penerbit'] ?></td>
-                                                <td align="center" class="table-info"><?= $data['tahun_terbit'] ?></td>
-                                                <td align="center" class="table-success"><?= $data['tanggal_cetak'] ?></td>
-                                                <td align="center" class="table-info"><?= $data['jml_halaman'] ?></td>
-                                                <td align="center" class="table-success"><?= $jb ?></td>
+                                              <td align="center" class="table-info"><?= $data['tahun_terbit'] ?></td>
+                                 <td align="center" class="table-success"><?= $data['tanggal_cetak'] ?></td>
+                             <td align="center" class="table-info"><?= $data['jml_halaman'] ?></td>
+                             <td align="center" class="table-success"><?= $jb ?></td>
                                                 <!-- <td><a href="edit.php?id=<?php echo $data['id'];?>">Edit</td>
                                               <td><a href="#" data-bs-toggle="modal" data-bs-target="#deletesurat<?php echo $data['id']; ?>">Delete</a></td> -->
 
@@ -111,36 +111,16 @@ require_once('koneksi.php');
                                                 
                                                     
                                                 
-                                                </td>
-                                            </tr>
+          </td>
+     </tr>
                                          
-<!-- <div class="modal" tabindex="-1">  -->
-     <!-- <div class="example-modal">    
-         <div id="deletesurat<?php echo $data['iddd'];?>" class="modal fade" role="dialog" style="display:none;">                           
-    <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title">Konfirmasi Delete Data SUrat</h3>
-      </div>
-      <div class="modal-body">
-      <form action="edit_proses.php?id=<?= $data['id'] ?>" method="post">
-      
-        <h4 align="center">Apakah anda yakin ingin menghapus no surat <?php echo $data['no_surat'];?><strong><span class="grt"></span></strong>?</h4>
-      </div>
-      </form>
-      <div class="modal-footer">
-        <button id="nodelete" type="button" class="btn btn-danger pull-left" data-bs-dismiss="modal">Cancle</button>
-        <button type="submit" name="submit" class="btn btn-info text-white">Delete</button>
-        <!-- <a href="../user/function_user.php?act=deletesurat&id=<?php echo $row['id_user'];?>" class="btn btn-primary">Delete</a> -->
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
     </div>  
     </div>       
   </div>
 </div>
-                                        <?php } ?>
+               <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

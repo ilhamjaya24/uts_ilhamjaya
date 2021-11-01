@@ -47,7 +47,7 @@ if ($dataisi['jenis_buku'] == 1) {
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
-                            <div class="h3 text-center">Tambah Data BUku</div>
+                            <div class="h3 text-center"><b>Tambah Data Buku</b></div>
                         </div>
                         <div class="card-body">
                             <form action="add.php" method="post">
@@ -112,9 +112,9 @@ if ($dataisi['jenis_buku'] == 1) {
                                             </select>
                                         </div>
                                     </div></div>
-                                    <div class="col-lg-6 mt-4">
-                     <button type="submit" name="submit" class="btn btn-info text-white">Tambah</button>
-                                        <a href="view.php" class="btn btn-danger">Cancel</a>
+                                    <div class="col-lg-6 mt-4" style="margin-right:85px; float: right;">
+                     <button type="submit" name="submit" class="btn btn-success text-white">Tambah</button>
+                                        <a href="view.php" class="btn btn-warning">Cancel</a>
                                     </div>
 
                                 </div>

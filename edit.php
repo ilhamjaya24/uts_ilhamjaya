@@ -50,7 +50,7 @@ if ($dataisi['jenis_buku'] == 1) {
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
-                            <div class="h3 text-center">Edit Data Buku</div>
+                            <div class="h3 text-center"><b>Edit Data Buku</b></div>
                         </div>
                         <div class="card-body">
                            <form action="edit.php?id=<?= $dataisi['id'] ?>" method="post">
@@ -107,13 +107,13 @@ if ($dataisi['jenis_buku'] == 1) {
                                                 <option value="3">Biografi</option>
                                                 <option value="4">Mata Pelajaran</option>
                                                 <option value="5">Komik</option>
-                                                
+                                                 
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="col-lg-6 mt-4">
-                    <button type="submit" name="submit" class="btn btn-success text-white">Update</button>
+                                    <div class="col-lg-6 mt-4" style="margin-right:80px; float: right;">
+                    <button type="submit" name="submit" class="btn btn-success text-white" >Update</button>
                    <a href="view.php" class="btn btn-warning">Cancel</a>
                                     </div>
 
