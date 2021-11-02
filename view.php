@@ -17,12 +17,24 @@ require_once('koneksi.php');
 </head>
 
 <body>
-    <div class="main mt-5">
-        <div >
- <!-- <?php 
-            $pesan = $_GET['pesan'];
-            $frm = $_GET['frm'];                      
-            if ($pesan == 'success' && $frm == 'del'){  
+  <div class="main mt-5">
+<div >
+
+
+ <?php 
+
+            if (isset($_GET['pesan'])&&isset($_GET['frm'])) {
+                $pesan = $_GET['pesan'];
+                $frm = $_GET['frm'];                     
+            }else{
+                $pesan = "";
+                $frm = "";
+            }
+             
+
+
+ if ($pesan == 'success' && $frm == 'del'){  
+            
  ?>
 
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -46,7 +58,7 @@ require_once('koneksi.php');
 </div>
 <?php
             }
-?> -->
+?>
             <div class="row">
                 <div class="col-lg-15">
                     <div class="card">
@@ -106,7 +118,7 @@ require_once('koneksi.php');
 
                                                 <td>
                           <a href="edit.php?id=<?= $data['id'] ?>" class="badge bg-warning text-dark p-2 text-decoration-none">Edit</a>
-                           <a href="delete.php?id=<?= $data['id'] ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')" class="badge bg-danger p-2 text-white text-decoration-none">Delete</a>
+         <a href="delete.php?id=<?= $data['id'] ?>" onclick="return confirm('Apakah yakin ingin menghapus data?')" class="badge bg-danger p-2 text-white text-decoration-none">Delete</a>
                                                 
                                                 
                                                     

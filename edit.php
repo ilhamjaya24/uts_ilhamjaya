@@ -88,7 +88,7 @@ if ($dataisi['jenis_buku'] == 1) {
                                      <div class="col-lg-6 mt-3">
                                         <div class="form-group">
                                             <small>TANGGAL CETAK</small>
-                                             <input type="text" name="tanggal_cetak" id="tanggal_cetak" class="form-control" value="<?= $dataisi['tanggal_cetak'] ?>">
+                                             <input type="date" name="tanggal_cetak" id="tanggal_cetak" class="form-control" value="<?= $dataisi['tanggal_cetak'] ?>">
                                         </div>
                                     </div>
                                      <div class="col-lg-6 mt-3">
@@ -154,13 +154,14 @@ if (isset($_POST['submit'])) {
     $update = $koneksi->query($update_sql);
 
     if ($update) {
-        // 
+     /*   header("Location:view.php?pesan=success");*/
         ?>
-        <script>
-            alert('DATA BERHASIL DIRUBAH');
-            window.location.href = '<?= "view.php" ?>';
+       <script>
+          /*  alert('DATA BERHASIL DITAMBAHKAN');*/
+            window.location.href = '<?= "view.php?pesan=success&&frm=edit" ?>';
         </script>
     <?php
+
     } else {
     ?>
         <script>

@@ -150,16 +150,16 @@ if (isset($_POST['submit'])) {
     $insert = $koneksi->query($insert_sql);
 
     if ($insert) {
-         // header("Location:view.php?pesan=success");
+       /* header("Location:view.php?pesan=success");*/
  ?>
-        <script>
-            alert('DATA BERHASIL DITAMBAHKAN');
-            window.location.href = '<?= "view.php" ?>';
+       <script>
+          /*  alert('DATA BERHASIL DITAMBAHKAN');*/
+            window.location.href = '<?= "view.php?pesan=success&&frm=add" ?>';
         </script>
     <?php
 
     } else {
-    ?>
+    ?> 
         <script>
             alert('Failed insert data');
         </script>
