@@ -5,7 +5,7 @@
 -- Host: 127.0.0.1
 -- Generation Time: Oct 31, 2021 at 10:36 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- PHP Version: 7.4.2 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -22,7 +22,7 @@ SET time_zone = "+00:00";
 -- Database: `db_bukuku`
 --
 
--- --------------------------------------------------------
+-- -------------------sss-------------------------------------
 
 --
 -- Table structure for table `tbl_buku`
