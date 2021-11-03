@@ -44,8 +44,8 @@ require_once('koneksi.php');
 <?php
             } else if($pesan=='success' && $frm == 'add'){
 ?>
-        <div class="alert alert-primary alert-dismissible fade show" role="alert">
-  <strong>Berhasil!</strong> Selamat Anda Berhasil Menambahkan
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Berhasil!</strong> Anda Berhasil Menambahkan Data Buku
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <?php
@@ -53,7 +53,7 @@ require_once('koneksi.php');
 ?>
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Berhasil!</strong> Selamat Anda Berhasil Merubah
+  <strong>Berhasil!</strong> Anda Berhasil Merubah Data Buku
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <?php
@@ -63,10 +63,12 @@ require_once('koneksi.php');
                 <div class="col-lg-15">
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
+                    <div class="h3 text-center"><marquee scrollamount=10  ><b>Selamat Datang di Toko Buku IlhamStore  </b></marquee></div>
+
                             <div class="h2 text-center"><b>Data Buku</b></div>
                             <div class="float-end">
                                
-                                <a href="add.php" style="margin-left: -735px; text-shadow: black;" class="badge bg-info py-3 px-2 small text-white fw-bold text-decoration-none">Tambah Data Buku</a>
+                                <a href="add.php" style="margin-left: -735px; text-shadow: black;" class="badge bg-success py-3 px-2 small text-white fw-bold text-decoration-none">Tambah Data Buku</a>
                                 <br> 
                             </div>
                         </div>
@@ -75,14 +77,14 @@ require_once('koneksi.php');
                             <div class="table-responsive">
                                 <table class="table w-100" >
                                     <thead class="table-dark">
-                                        <tr>
+                                        <tr align="center">
                                             <th >KODE BUKU</th>
                                             <th>JUDUL BUKU</th>
                                             <th>PENULIS</th>
                                             <th>PENERBIT</th>
                                             <th>TAHUN TERBIT</th>
                                             <th>TANGGAL CETAK</th>
-                                            <th>JUMLAH HALAMAN</th>
+                                            <th>JML HALAMAN</th>
                                             <th>JENIS BUKU</th>
                                             <th>Action</th>
                                         </tr>
